@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=""/>
-    <link rel="stylesheet" href="css/jp02.css">
+    <link rel="stylesheet" href="css/jp01.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -15,7 +16,15 @@
     <meta name="msapplication-TileColor" content="#2d89ef">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <title>Discover Amazing places in Japan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+    <title>Guide to the Land of Great Adventures</title>
 </head>
 <body>
    
@@ -24,25 +33,30 @@
         <div class="wrapper">
             <div class="header__wrapper">
                 <div class="header__logo">
-                    <a href="/" class="header__logo-link">
-                        <img src="./img/odigo-logo.png" alt="Discover Amazing places in Japan" class="header__logo-pic">
+                    <a class="header__logo-link">
+                        <img src="./img/gloga-logo.png" alt="Discover Amazing places in Japan" class="header__logo-pic">
                     </a>
                 </div>
     
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#articles" class="header__link js-scroll">Articles</a>
+                            <a href="#sign-in" class="header__link js-scroll" data-i18n="home">ГЛАВНОЕ</a>
                         </li>
                         <li class="header__item">
-                            <a href="#locations" class="header__link js-scroll">Locations</a>
+                            <a href="#articles" class="header__link js-scroll" data-i18n="articles">СТАТЬИ</a>
                         </li>
                         <li class="header__item">
-                            <a href="#videos" class="header__link js-scroll">Videos</a>
+                            <a href="#locations" class="header__link js-scroll" data-i18n="locations">ЛОКАЦИИ</a>
                         </li>
                         <li class="header__item">
-                            <a href="#sign-in" class="header__link js-scroll">Sign in</a>
+                            <a href="#videos" class="header__link js-scroll" data-i18n="video">ВИДЕО</a>
                         </li>
+                        <div class="languages header__item">
+                            <p id="russian-btn" class="header__link">RU</p>
+                            <p class="header__link">|</p>
+                            <p id="english-btn" class="header__link">EN</p>
+                        </div>
                     </ul>
                     <div class="header__nav-close">
                         <span class="header__nav-close-line"></span>
@@ -64,77 +78,67 @@
     <!-- Intro start -->    
     <div class="intro" id="sign-in">
             <div class="wrapper">
-                <h1 class="intro__title">
-                    Discover Amazing places in Japan
+                <h1 class="intro__title" data-i18n="intro__title">
+                    Откройте Для Себя Удивительные Места Казахстана
                 </h1>
-                <p class="intro__subtitle">
-                    Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, 
-                </p>
-                <form class="search-form">
-                    <fieldset class="search-form__wrap">
-                        <p class="search-form__info">
-                            <input type="text" class="search-form__field" placeholder="What would you like to do?">
-                            <input type="text" class="search-form__field" placeholder="Where would you like to go?">
-                            <button type="submit" class="search-form__submit">search</button>
-                        </p>
+                <p class="intro__subtitle" data-i18n="intro__subtitle">
+                    Казахстан славится своими безграничными просторами степей, которые представляют собой удивительные ландшафты и уникальную природу. Открыв для себя эти места, вы погрузитесь в мир бескрайних просторов, где небо сливается с землей, и где вы почувствуете свободу и уединение, недоступные в городской суете. 
                     </fieldset>
                 </form>
             </div>
         </div>
         <!-- Intro end -->
 
-
-        
         <!-- Benefits start -->
         <section class="benefits">
             <div class="benefits__wrap">
                 <h2 class="benefits__title">
-                    Benefits of Odigo
+                    
                 </h2>
-                <div class="benefits__cards">
+            <div class="benefits__cards">
 
-                    <div class="benefits__card">
-                        <div class="benefits__card-pic">
-                            <img src="img/home-ico.png" alt="Welcome to Odigo!" class="benefits__card-thumb">
-                        </div>
-                        <h3 class="benefits__card-title">
-                            Welcome to Odigo!
-                        </h3>
-                        <p class="benefits__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
-                        </p>
-                        <a href="#!" class="benefits__card-more">
-                            LEARN MORE
-                        </a>
-                    </div>
+            <div class="benefits__card">
+            <div class="benefits__card-pic">
+                    <img src="img/home-ico.png" alt="Welcome to Odigo!" class="benefits__card-thumb">
+            </div>
+                    <h3 class="benefits__card-title" data-i18n="tickets">
+                        Дешевые Билеты!
+                    </h3>  
+            <p class="benefits__card-desc" data-i18n="tickets__desc">
+                Дешевые билеты для вашего путешествия по Казахстану. Планируйте свои поездки заранее и экономьте на перелетах.       
+            </p>
+                    <a href="https://www.aviasales.kz/?params=KGF1" class="benefits__card-more" data-i18n="more">
+                        ПОДРОБНЕЕ
+                    </a>
+            </div>
 
-                    <div class="benefits__card">
-                        <div class="benefits__card-pic">
-                            <img src="img/human-ico.png" alt="Your Personal Japan Guide" class="benefits__card-thumb">
-                        </div>
-                        <h3 class="benefits__card-title">
-                            Your Personal Japan Guide
-                        </h3>
-                        <p class="benefits__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
-                        </p>
-                        <a href="#!" class="benefits__card-more">
-                            LEARN MORE
-                        </a>
-                    </div>
+            <div class="benefits__card">
+            <div class="benefits__card-pic">
+                    <img src="img/human-ico.png" alt="Your Personal Japan Guide" class="benefits__card-thumb">
+            </div>
+                   <h3 class="benefits__card-title" data-i18n="tours">        
+                       Лучшие экскурсии!
+                    </h3>
+                    <p class="benefits__card-desc" data-i18n="tours__desc">
+                        Найдите местного гида для экскурсий и узнайте больше о местной культуре, традициях и истории.
+                    </p>
+                    <a href="https://experience.tripster.ru/destinations/kazakhstan/?utm_term=link&utm_source=wikiway&utm_campaign=affiliates&utm_medium=link" class="benefits__card-more" data-i18n="more">
+                        ПОДРОБНЕЕ
+                    </a>
+            </div>
 
                     <div class="benefits__card">
                         <div class="benefits__card-pic">
                             <img src="img/lavka.png" alt="Promoting Local Businesses" class="benefits__card-thumb">
                         </div>
-                        <h3 class="benefits__card-title">
-                            Promoting Local Businesses
+                        <h3 class="benefits__card-title" data-i18n="hotel">
+                            Отели с лучшими Ценами!
                         </h3>
-                        <p class="benefits__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over.
+                        <p class="benefits__card-desc" data-i18n="hotel__desc">
+                            Найдите лучшие отели и гостиницы по лучшим ценам для вашего пребывания.
                         </p>
-                        <a href="#!" class="benefits__card-more">
-                            LEARN MORE
+                        <a href="https://www.booking.com/country/kz.ru.html?aid=356980&label=gog235jc-1DCAIogAFCAmt6SCFYA2iAAYgBAZgBIbgBB8gBDNgBA-gBAfgBAogCAagCA7gCn7qJsQbAAgHSAiQ5YzM2MDIwYS1lMjgxLTQ1NWItODAyOS00YTQxOWE1Y2M2OTDYAgTgAgE&sid=bc288a9c689ef1b1c52f7b555e4bc326&changed_currency=1&selected_currency=KZT&top_currency=1" class="benefits__card-more" data-i18n="more">
+                            ПОДРОБНЕЕ
                         </a>
                     </div>
                 </div>
@@ -144,52 +148,57 @@
 
         <!-- Places start -->
 
-        <section class="places">
+        <section class="places" id="articles">
             <div class="wrapper-full">
                 <div class="places__caption">
-                    <h2 class="places__title section-title">
-                        Get inspired for your next trip
+                    <h2 class="places__title section-title" data-i18n="places__title">
+                        Изучите прекрасные места Казахстана!
                     </h2>
                     <a href="#!" class="places__view-all">
-                        VIEW ALL
+                        
                     </a>
                 </div>
                 <div class="places__cards">
                     <div class="places__card places__card_size_lg">
-                        <img src="img/place-1-min.jpg" alt="Mount Fuji" class="places__card-pic places__card-pic_size_lg">
-                        <h3 class="places__card-title"> 
-                            Mount Fuji
-                        </h3>
-                        <a href="#!" class="places__card-link"></a>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B0%D1%82%D0%B0%D1%83_(%D0%B3%D0%BE%D1%80%D1%8B)">
+                            <img src="img/place-1-min.png" alt="Mount Fuji" class="places__card-pic places__card-pic_size_lg">
+                            <h3 class="places__card-title" data-i18n="mount"> 
+                                Гора-Алатау
+                            </h3>
+                        </a>
                     </div>
                     <div class="places__card places__card_size_lg">
-                        <img src="img/place-2-min.jpg" alt="Kyoto" class="places__card-pic places__card-pic_size_lg">
-                        <h3 class="places__card-title"> 
-                            Kyoto
+                       <a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%83%D1%80%D0%BA%D0%B5%D1%81%D1%82%D0%B0%D0%BD_(%D0%B3%D0%BE%D1%80%D0%BE%D0%B4)">
+                        <img src="img/place-2-min.png" alt="Kyoto" class="places__card-pic places__card-pic_size_lg">
+                        <h3 class="places__card-title" data-i18n="turkestan"> 
+                            Туркестан
                         </h3>
-                        <a href="#!" class="places__card-link"></a>
+                        </a>
                     </div>
                     <div class="places__card places__card_size_sm">
-                        <img src="img/place-3-min.jpg" alt="Tokyo" class="places__card-pic places__card-pic_size_sm">
-                        <h3 class="places__card-title"> 
-                            Tokyo
+                        <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%BC%D0%B0-%D0%90%D1%82%D0%B0">
+                        <img src="img/place-3-min.png" alt="Tokyo" class="places__card-pic places__card-pic_size_sm">
+                        <h3 class="places__card-title" data-i18n="almaty"> 
+                            Алматы
                         </h3>
-                        <a href="#!" class="places__card-link"></a>
+                        </a>
                     </div>
                     <div class="places__card places__card_size_sm">
-                        <img src="img/place-4-min.jpg" alt="Niigata" class="places__card-pic places__card-pic_size_sm">
-                        <h3 class="places__card-title"> 
-                            Niigata
+                        <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BA%D1%82%D0%B0%D1%83">
+                         <img src="img/place-4-min.png" alt="Niigata" class="places__card-pic places__card-pic_size_sm">
+                        <h3 class="places__card-title" data-i18n="aktau"> 
+                            Актау
                         </h3>
-                        <a href="#!" class="places__card-link"></a>
+                        </a>
                     </div>
                     <div class="places__card places__card_size_sm">
-                        <img src="img/place-5-min.jpg" alt="Sapporo" class="places__card-pic places__card-pic_size_sm">
-                        <h3 class="places__card-title"> 
-                            Sapporo
+                       <a href="https://ru.wikipedia.org/wiki/%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0">
+                         <img src="img/place-5-min.png" alt="Sapporo" class="places__card-pic places__card-pic_size_sm">
+                        <h3 class="places__card-title" data-i18n="astana"> 
+                            Астана
                         </h3>
-                        <a href="#!" class="places__card-link"></a>
-                    </div>
+                        </a>
+                        </div>
                 </div>
             </div>
         </section>
@@ -197,7 +206,7 @@
        
         <!-- Tours start -->
         
-        <div class="tours" id="articles">
+        <div class="tours">
             <div class="wrapper-full">
 
                 <div class="tours__tour tour">
@@ -205,25 +214,25 @@
                         <img src="img/tour-1.png" alt="Prefecture in Focus: Tottori" class="tour-thumb">
                     </div>
                     <div class="tour__info">
-                        <h3 class="tour__title">
-                            Prefecture in Focus: Tottori 
+                        <h3 class="tour__title" data-i18n="charyn">
+                            ЧАРЫНСКИЙ КАНЬОН
                         </h3>
-                        <p class="tour__desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, 
+                        <p class="tour__desc" data-i18n="charyn__desc">
+                            Чарынский каньон - это каньон в Центральном Казахстане, который нередко называют "маленьким братом" знаменитого Гранд-Каньона в США. Он известен своими красивыми красноватыми скалами, формировавшимися в результате эрозии, и потрясающими пейзажами. Каньон привлекает туристов своей красотой и возможностями для пеших и велосипедных прогулок.   
                         </p>
-                        <a href="#!" class="tour__more">VIEW PREFECTURE</a>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B0%D1%80%D1%8B%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%BA%D0%B0%D0%BD%D1%8C%D0%BE%D0%BD" class="tour__more" data-i18n="more">ПОДРОБНЕЕ</a>
                     </div>
                 </div>
 
                 <div class="tours__tour tour">
                     <div class="tour__info">
-                        <h3 class="tour__title">
-                            Featured Neighborhood: Kyoto’s Arashiyama 
+                        <h3 class="tour__title" data-i18n="lake">
+                            ОЗЕРО АЛАКОЛЬ
                         </h3>
-                        <p class="tour__desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this if i had the energy but under the bed, for attack the child, open the door, 
+                        <p class="tour__desc" data-i18n="lake__desc">
+                            Алаколь - это солёное озеро в Восточном Казахстане, расположенное на высоте около 347 метров над уровнем моря.  
                         </p>
-                        <a href="#!" class="tour__more">VIEW PREFECTURE</a>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B0%D0%BA%D0%BE%D0%BB%D1%8C" class="tour__more" data-i18n="more">ПОДРОБНЕЕ</a>
                     </div>
                     <div class="tour__pic tour__pic_mob-first">         
                         <img src="img/tour-2.png" alt="Featured Neighborhood: Kyoto’s Arashiyama" class="tour-thumb">
@@ -238,162 +247,153 @@
         <!-- Top start-->
         <section class="top" id="locations">
             <div class="wrapper-full">
-                <h2 class="top__title section-title">
-                    Today top places to visit
+                <h2 class="top__title section-title" data-i18n="visit">
+                    ТОП МЕСТ ДЛЯ ВИЗИТА
                 </h2>
 
                 <div class="top__cadrs">
 
                     <div class="top__card">
                         <div class="top__card-pic">
-                            <img src="img/top-pic-1-min.jpg" alt="NAGOYA" class="top__card-thumb">
+                            <img src="img/top-pic-1-min.png" alt="NAGOYA" class="top__card-thumb">
                             <div class="top__card-stats">
-                                <h3 class="top__card-title">
-                                    NAGOYA
+                                <h3 class="top__card-title" data-i18n="medeo">
+                                    МЕДЕУ
                                 </h3>
                                 <div class="top__card-likes">
                                     <span class="top__card-likes-value">
-                                        221
+                                    
                                     </span>
                                 </div>
                                 <div class="top__card-comments">
                                     <span class="top__card-comments-value">
-                                        50
-                                    </span>
+                                                                        </span>
                                 </div>
                             </div>
                         </div>
-                        <p class="top__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+                        <p class="top__card-desc" data-i18n="medeo__desc">
+                            Медеу - это каток в горах, расположенный неподалеку от города Алматы в Казахстане. Он знаменит своим уникальным расположением на высоте около 1700 метров над уровнем моря, что делает его одним из самых высоких катков в мире.
                         </p>
-                        <a href="#!" class="top__card-more">SEE MORE</a>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%B4%D0%B5%D0%BE" class="top__card-more" data-i18n="more">ПОДРОБНЕЕ</a>
                     </div>
                     
                     <div class="top__card">
                         <div class="top__card-pic">
                             <img src="img/top-pic-2-min.jpg" alt="NIIGATA" class="top__card-thumb">
                             <div class="top__card-stats">
-                                <h3 class="top__card-title">
-                                    NIIGATA
+                                <h3 class="top__card-title" data-i18n="koktobe">
+                                    КОКТОБЕ
                                 </h3>
                                 <div class="top__card-likes">
                                     <span class="top__card-likes-value">
-                                        221
+                                    
                                     </span>
                                 </div>
                                 <div class="top__card-comments">
                                     <span class="top__card-comments-value">
-                                        50
-                                    </span>
+                                                                        </span>
                                 </div>
                             </div>
                         </div>
-                        <p class="top__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+                        <p class="top__card-desc" data-i18n="koktobe__desc">
+                            Коктобе - это живописный холм, расположенный на окраине города Алматы в Казахстане. С вершины Коктобе открывается потрясающий вид на город и его окрестности, включая Заилийский Алатау. Здесь также расположен телевизионный башня "Коктобе", которая является одним из символов города. 
                         </p>
-                        <a href="#!" class="top__card-more">SEE MORE</a>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BA-%D0%A2%D0%BE%D0%B1%D0%B5" class="top__card-more" data-i18n="more">ПОДРОБНЕЕ</a>
                     </div>
 
                     <div class="top__card">
                         <div class="top__card-pic">
                             <img src="img/top-pic-3-min.jpg" alt="OSAKA" class="top__card-thumb">
                             <div class="top__card-stats">
-                                <h3 class="top__card-title">
-                                    OSAKA
+                                <h3 class="top__card-title" data-i18n="esentai">
+                                    ЕСЕНТАЙ
                                 </h3>
                                 <div class="top__card-likes">
                                     <span class="top__card-likes-value">
-                                        221
+                                    
                                     </span>
                                 </div>
                                 <div class="top__card-comments">
                                     <span class="top__card-comments-value">
-                                        50
-                                    </span>
+                                                                        </span>
                                 </div>
                             </div>
                         </div>
-                        <p class="top__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+                        <p class="top__card-desc" data-i18n="esentai__desc">
+                        Esentai Mall - это крупный торговый центр в Казахстане. Он является одним из самых известных и престижных торговых комплексов в регионе. Esentai Mall предлагает широкий выбор магазинов, ресторанов, кинотеатров и других развлекательных заведений для посетителей всех возрастов и интересов. 
                         </p>
-                        <a href="#!" class="top__card-more">SEE MORE</a>
+                        <a href="https://esentai.com/" class="top__card-more" data-i18n="more">ПОДРОБНЕЕ</a>
                     </div>
 
                     <div class="top__card">
                         <div class="top__card-pic">
                             <img src="img/top-pic-4-min.jpg" alt="SAITAMA" class="top__card-thumb">
                             <div class="top__card-stats">
-                                <h3 class="top__card-title">
-                                    SAITAMA
+                                <h3 class="top__card-title" data-i18n="borovoe">
+                                    БОРОВОЕ
                                 </h3>
                                 <div class="top__card-likes">
                                     <span class="top__card-likes-value">
-                                        221
-                                    </span>
+                                                                        </span>
                                 </div>
                                 <div class="top__card-comments">
                                     <span class="top__card-comments-value">
-                                        50
-                                    </span>
+                                                                        </span>
                                 </div>
                             </div>
                         </div>
-                        <p class="top__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+                        <p class="top__card-desc" data-i18n="borovoe__desc">
+                            Бурабай - это курортный район в Казахстане, расположенный в Акмолинской области. Он славится своей изумительной природой, включая живописные горные озера, леса и скалы. Бурабай является популярным местом для активного отдыха, такого как пешие прогулки, велосипедные прогулки, альпинизм и катание на лыжах (зимой). 
                         </p>
-                        <a href="#!" class="top__card-more">SEE MORE</a>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_(%D0%BE%D0%B7%D0%B5%D1%80%D0%BE)" class="top__card-more" data-i18n="more">ПОДРОБНЕЕ</a>
                     </div>
 
                     <div class="top__card">
                         <div class="top__card-pic">
-                            <img src="img/top-pic-5-min.jpg" alt="UENO" class="top__card-thumb">
+                            <img src="img/top-pic-5-min.png" alt="UENO" class="top__card-thumb">
                             <div class="top__card-stats">
-                                <h3 class="top__card-title">
-                                    UENO
+                                <h3 class="top__card-title" data-i18n="balhash">
+                                    БАЛХАШ
                                 </h3>
                                 <div class="top__card-likes">
                                     <span class="top__card-likes-value">
-                                        221
+                                    
                                     </span>
                                 </div>
                                 <div class="top__card-comments">
                                     <span class="top__card-comments-value">
-                                        50
-                                    </span>
+                                                                        </span>
                                 </div>
                             </div>
                         </div>
-                        <p class="top__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+                        <p class="top__card-desc" data-i18n="balhash__desc">
+                            Озеро Балхаш - это крупнейшее озеро в Казахстане и одно из самых больших солёных озёр в мире. Оно имеет уникальные экологические и географические характеристики, так как разделено на две части: восточную, солёную, и западную, пресную. 
                         </p>
-                        <a href="#!" class="top__card-more">SEE MORE</a>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%BB%D1%85%D0%B0%D1%88" class="top__card-more" data-i18n="more">ПОДРОБНЕЕ</a>
                     </div>
 
                     <div class="top__card">
                         <div class="top__card-pic">
                             <img src="img/top-pic-6-min.jpg" alt="SHIBUYA" class="top__card-thumb">
                             <div class="top__card-stats">
-                                <h3 class="top__card-title">
-                                    SHIBUYA
+                                <h3 class="top__card-title" data-i18n="shym">
+                                    ШЫМБУЛАК  
                                 </h3>
                                 <div class="top__card-likes">
                                     <span class="top__card-likes-value">
-                                        221
+                                    
                                     </span>
                                 </div>
                                 <div class="top__card-comments">
                                     <span class="top__card-comments-value">
-                                        50
-                                    </span>
+                                                                        </span>
                                 </div>
                             </div>
                         </div>
-                        <p class="top__card-desc">
-                            Jump off balcony, onto stranger's head. Chase ball of string hide when guests come over. Being gorgeous with belly side up i could pee on this.
+                        <p class="top__card-desc" data-i18n="shym__desc">
+                            Шымбулак - это крупный горнолыжный курорт, расположенный неподалеку от города Алматы в Казахстане. Он известен своими высококачественными трассами, красивыми горными пейзажами и обширными возможностями для зимних видов спорта. 
                         </p>
-                        <a href="#!" class="top__card-more">SEE MORE</a>
+                        <a href="https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D0%BC%D0%B1%D1%83%D0%BB%D0%B0%D0%BA" class="top__card-more" data-i18n="more">ПОДРОБНЕЕ</a>
                     </div>
 
                 </div>
@@ -405,10 +405,11 @@
 
         <!-- Videos start -->
 
+        
         <div class="videos" id="videos">
             <div class="videos__wrapper">
                 <div class="video__item"></div>
-                <iframe class="video__element" src="https://www.youtube.com/embed/IuTDuvYr7f0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                <iframe class="video__element" src="https://www.youtube.com/embed/XXijnfLSRCE?si=zJmIZltTs4_-tivO" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
         
@@ -416,75 +417,12 @@
     </main>
     
     <footer class="footer">
-        <div class="wrapper">
-            <div class="footer__item">
-                <div class="footer__logo">
-                    <img src="img/odigo-logo-footer.png" alt="Discover Amazing places in Japan" class="footer__logo-pic">
-                </div>
-                <nav class="footer_nav">
-                    <ul class="footer__menu">
-                        <li class="footer__menu-item">
-                            <h3 class="footer__menu-title">
-                                Company
-                            </h3>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">About</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Team</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Careers</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Privacy Policy</a>
-                        </li>
-                    </ul>
-                    <ul class="footer__menu">
-                        <li class="footer__menu-item">
-                            <h3 class="footer__menu-title">
-                                Locations
-                            </h3>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Tokyo</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Osaka</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Kyoto</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Hokkaido</a>
-                        </li>
-                    </ul>
-                    <ul class="footer__menu">
-                        <li class="footer__menu-item">
-                            <h3 class="footer__menu-title">
-                                Social Media
-                            </h3>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Facebook</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Twitter</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Instagram</a>
-                        </li>
-                        <li class="footer__menu-item">
-                            <a href="#!" class="footer__menu-link">Youtube</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="wrapper__bottom">
+            <img src="img/gloga-logo-footer.png" alt="Discover Amazing places in Japan" class="footer__logo-pic">
         </div>
     </footer>
 
-    <script src="js/jp02-ES5.js"></script>
+    <script src="js/jp01-ES6.js"></script>
 </body>
 </html>
                     

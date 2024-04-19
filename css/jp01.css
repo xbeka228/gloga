@@ -360,33 +360,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-/* lato-regular - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-         url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-  /* lato-700 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-         url('../fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-  /* lato-900 - latin */
-@font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/lato-v23-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-         url('../fonts/lato-v23-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
 html{
     box-sizing: border-box;
 }
@@ -413,6 +386,16 @@ img{
     margin: 0 auto;
     padding: 0 15px;
 }
+
+.wrapper__bottom{
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper-full{
     max-width: 1262px;
     margin: 0 auto;
@@ -431,13 +414,26 @@ img{
     content: '';
     width: 253px;
     height: 3px;
-    background-color:#006DFE;
+    background-color:#0E1D28;
     position: absolute;
     bottom: 0;
     left: 0;
 }
 
 /* Header styles start */
+
+
+
+.languages {
+    color: white;
+    display: flex;
+    margin-left: 2rem;
+}
+
+.languages p {
+    margin-left: 5px;
+    cursor: pointer;
+}
 
 .header{
     position: fixed;
@@ -469,7 +465,6 @@ img{
     margin-right: 0;
 }
 .header__link{
-    font-size: 18px;
     line-height: 24px;
     color: white;
     text-decoration: none;
@@ -502,6 +497,12 @@ img{
     bottom: 0;
 }
 
+.header__nav {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
 /* Header styles end */
 
 
@@ -521,48 +522,25 @@ img{
     font-size: 50px;
     line-height: 60px;
     color: white;
-    margin-bottom: 22px;
+    margin-top: 22px;
 }
+
+.test01{
+    max-width: 619px;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 60px;
+    color: white;
+    margin-top: 22px;
+}
+
 .intro__subtitle{
     max-width: 546px;
     color: white;
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 59px;
-}
-.search-form__info{
-    display: flex;
-    flex-wrap: wrap;
-}
-.search-form__field{
-    width: 297px;
-    background: transparent url(../img/oval.png) no-repeat left 6px;
-    background-size: 20px;
-    border: 0;
-    border-bottom: 2px solid #BFC0C5;
-    margin-right: 60px;
-    padding-left: 43px;
-    padding-bottom: 22px;
-    font-weight: 500;
-    font-size: 18px;
-    color: white;
-}
-.search-form__field::placeholder{
-    font-weight: 500;
-    font-size: 18px;
-    color: white;
-}
-.search-form__submit{
-    padding: 15px 39px;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 24px;
-    color: white;
-    background:  #1B7DFF;
-    border: 0;
-}
-.search-form__submit:hover, .search-form__submit:focus, .search-form__submit:active{
-    background: #1b56a4;
+    margin-top: 25px;
+    font-weight: bolder;
 }
 /* Intro styles end */
 
@@ -600,6 +578,9 @@ img{
 .benefits__card{
     grid-column: span 1;
     margin-bottom: 112px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .benefits__card-pic{
     max-width: 66px;
@@ -624,14 +605,11 @@ img{
     padding-right: 59px;
     font-size: 16px;
     line-height: 24px;
-    color: #006DFE;
+    color: #0E1D28;;
     text-decoration: none;
-    background: url(../img/strelka.png) no-repeat 95% center;
-    transition: .2s all;
+    background: url(../img/strelka.png) no-repeat 50% center;
 }
-.benefits__card-more:hover, .benefits__card-more:focus{
-    background: url(../img/strelka.png) no-repeat right center;
-}
+
 /* Benefits styles end */
 
 
@@ -647,12 +625,12 @@ img{
     justify-content: space-between;
     margin-bottom: 36px;
 }
-.places__title{
-    margin-right: 15px; /*когда будет min разрешение не будет залезать == time code:39:00 channel Step to Web*/
+.section-title{
+    margin-right: 15px; 
 }
 .places__view-all{
     font-size: 16px;
-    color:  #006DFE;
+    color:  #0E1D28;;
     text-decoration: none;
     padding-right: 59px;
     background: url(../img/strelka.png) no-repeat right center;
@@ -740,7 +718,7 @@ img{
     font-weight: 500;
     font-size: 30px;
     line-height: 40px;
-    margin-bottom: 85px;
+    margin-bottom: 30px;
 }
 .tour__desc{
     font-size: 16px;
@@ -749,7 +727,7 @@ img{
 }
 .tour__more{
     font-size: 16px;
-    color:  #006DFE;
+    color:  #0E1D28;
     text-decoration: none;
     padding-right: 59px;
     background: url(../img/strelka.png) no-repeat right center;
@@ -826,23 +804,23 @@ img{
 }
 .top__card-more{
     width: 118px;
-    padding: 12px 19px;
-    background: #006DFE;
+    padding: 12px 15px;
+    background: #0E1D28;;
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 13px;
     margin: auto 0 0 0;
 }
 .top__card-more:hover, .top__card-more:focus, .top__card-more:active{
-    background: #1b56a4;
+    background: #0E1D28;;
 }
-/* 43:00 Начни с этого если нужен совет по расположению текста с кнопками и ссылками #5 урок*/
 /*Top places styles end */
 
 /* Videos styles start */
 
 .videos{
     width: 100%;
+    padding: 3rem 0;
 }
 .videos__wrapper{
     max-width: 1440px;
@@ -891,7 +869,8 @@ img{
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;      
+    line-height: 24px;
+    padding: 3px;
 }
 .footer__menu-link:hover, .footer__menu-link:focus, .footer__menu-link:active{
     opacity: .75;
@@ -950,7 +929,7 @@ img{
     }
     .footer {
         padding: 60px 0;
-    }
+    }   
 }
 
 @media screen and (max-width:767px) {
@@ -1023,19 +1002,8 @@ img{
         line-height: 48px;
     }
     .intro__subtitle {
-        font-size: 14px;
-    }
-    .search-form__field {
-        width: 100%;
-        margin-right: 0;
-        padding-bottom: 12px;
-        background:  transparent url(../img/oval.png) no-repeat left 2px;
-    }
-    .search-form__field::placeholder {
-        font-size: 16px;
-    }
-    .search-form__submit {
-        width: 100%;
+        font-size: 17px;
+        font-weight: normal;
     }
     .benefits{
         margin-bottom: 36px;
@@ -1095,6 +1063,9 @@ img{
     .footer__logo {
         width: 100%;
         margin-bottom: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .footer_nav {
         width: 100%;
@@ -1102,6 +1073,12 @@ img{
     .footer__menu {
         width: 50%;
         margin-bottom: 24px;
+    }
+    .languages {
+        margin-left: 0;
+    }
+    .languages p {
+        margin-left: 0;
     }
 }
 
